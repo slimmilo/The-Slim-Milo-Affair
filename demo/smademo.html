@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>The Slim Milo Affair Demo</title>
+  <style>
+    #slimmilo {
+      margin: auto;
+      width: 330px; 
+      text-align: center;
+    }
+
+    #my-element {
+      width: 330px; 
+      height: 330px; 
+      margin: 100px auto;
+    }
+
+    .sma-horizontal-bar {
+      background: white;
+    }
+
+    .sma-vertical-bar {
+      background: white;
+    }
+  </style>
+</head>
+
+<body>
+  <div id='my-element'></div>
+  <div id='slimmilo'>
+    <a href="http://slimmilo.com/">Slim Milo LLC</a>, Designed with a Story</a>
+  </div>
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script> 
+  <script src="../sma.js"></script>
+
+  <script type="text/javascript">
+    $(window).load(function() {
+      function createFirstStage(sma) {
+        var stage = sma.createStage();
+
+        stage.createHorizontalBarLtoR().setY(60);
+        stage.createVerticalBarPinch().setX(60);
+        stage.setMainImage("first-main.jpg");
+
+        var slots = stage.getSlots();
+        slots[0].setImage("first-sub-0.jpg").setSlideDirection("LtoR");
+        slots[1].setImage("first-sub-1.jpg").setSlideDirection("BtoT");
+        slots[2].setImage("first-sub-2.jpg").setSlideDirection("RtoL");
+      }
+
+      var sma = new SlimMiloAffair($('#my-element')).setBarDuration(1000)
+                                                    .setBarWidth(15);
+      //sma.enableSetupMode();
+
+      createFirstStage(sma);
+
+      sma.run();
+    });
+  </script>
+</body>
+</html>
