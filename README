@@ -1,0 +1,19 @@
+The Slim Milo Affair is a jQuery-based effect library for doing an automated
+slideshow in a style inspired to the Pablo Ferro style used in "The Thomas
+Crown Affair" (1968). Each slide has a main image which fades in, followed
+by a series of horizontal and vertical bars sliding in over the main image.
+The box areas defined by the bars are then filled with small subimages sliding
+in. The whole area then fades out and is followed by the next slide fading in.
+
+For the moment, the only usage instructions are here:
+
+http://slimmilo.com/blog/index.php/2011/09/27/the-slim-milo-affair/
+
+The demo files from that tutorial are included in this repository.
+
+The code includes John Resig's Simple JavaScript Inheritance from his 
+blog at http://ejohn.org/
+
+Dual licensed under the MIT or GPL Version licenses.
+
+Copyright 2011, Slim Milo LLC
